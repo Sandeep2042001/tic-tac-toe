@@ -1,0 +1,87 @@
+body {
+    background-color: #f5f5f5;
+  }
+  .head{
+    text-align: center;
+  }
+  .shead{
+    text-align: center;
+  }
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 300px;
+    margin: 20px auto;
+  }
+  
+  .cell {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    cursor: pointer;
+    background-color: #fcfcfc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .cell.X {
+    background-color: #ff4081;
+    color: #fff;
+  }
+  
+  .cell.O {
+    background-color: #448aff;
+    color: #fff;
+  }
+  
+  .cell:before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .cell:hover:before {
+    opacity: 0.2;
+  }
+  
+  .cell.X:before {
+    background-image: url('x.png');
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .cell.O:before {
+    background-image: url('o.png');
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+        
